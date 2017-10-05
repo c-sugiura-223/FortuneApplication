@@ -28,19 +28,16 @@ public class MainActivity extends AppCompatActivity {
         // フォーマット
         String nowText = formatter.format(now);
 
+
         // 表示
         TextView textView = (TextView)findViewById(R.id.textDate);
         textView.setText(nowText);          // 文字
         textView.setTextColor(Color.GREEN); // 色
-        textView.setTextSize(18.0f);        // サイズ
+        textView.setTextSize(30.0f);        // サイズ
+
+
+
     }
-
-
-    /**
-     *           // 文字
-     textView.setTextColor(Color.GREEN); // 色
-     textView.setTextSize(18.0f);        // サイズ
-     */
 
     /**
      * 「占う」ボタンタップ時イベント
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onFortuneButtonTapped(View view){
         // 乱数を整数型で取得
-        int fortune = (int)(Math.random() * 100);
+        int fortune = (int)(Math.random() * 50);
 
         // ログ出力し、乱数を確認
         Log.d("＊＊＊＊＊＊＊＊＊＊","fortuneは「" + fortune + "」");
