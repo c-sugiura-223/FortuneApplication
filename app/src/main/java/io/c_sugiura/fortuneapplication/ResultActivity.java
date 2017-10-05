@@ -1,6 +1,7 @@
 package io.c_sugiura.fortuneapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,6 +25,8 @@ public class ResultActivity extends AppCompatActivity {
 
         // おみくじ結果文字列view
         TextView textView = (TextView) findViewById(R.id.resultText);
+        textView.setTextColor(Color.RED); // 色
+        textView.setTextSize(40.0f);      // サイズ
 
         // 画像を設定
         if( 0 <= fortune &&  fortune < 5){

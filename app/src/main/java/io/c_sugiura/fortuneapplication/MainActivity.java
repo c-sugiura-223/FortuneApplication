@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // タイトルバー非表示
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         // 現在日時の取得
         Date now = new Date(System.currentTimeMillis());
 
@@ -28,15 +31,11 @@ public class MainActivity extends AppCompatActivity {
         // フォーマット
         String nowText = formatter.format(now);
 
-
         // 表示
         TextView textView = (TextView)findViewById(R.id.textDate);
         textView.setText(nowText);          // 文字
-        textView.setTextColor(Color.GREEN); // 色
-        textView.setTextSize(30.0f);        // サイズ
-
-
-
+        textView.setTextColor(Color.RED);   // 色
+        textView.setTextSize(40.0f);        // サイズ
     }
 
     /**
