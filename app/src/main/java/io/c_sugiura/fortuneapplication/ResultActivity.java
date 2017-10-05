@@ -13,6 +13,7 @@ public class ResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 表示画面を設定
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
@@ -53,10 +54,10 @@ public class ResultActivity extends AppCompatActivity {
                 textView.setText("【学業・技芸・試験】知識のある人の知恵を借りて方針を決めるとよい。");
                 break;
             case 3 :
-                textView.setText("【旅行】十分でない　控えよ");
+                textView.setText("【旅行】東西南北いずれも良し");
                 break;
             case 4 :
-                textView.setText("【商売】物価下る買うはわるし");
+                textView.setText("【商売】思う通りになる");
                 break;
 
             case 5 :

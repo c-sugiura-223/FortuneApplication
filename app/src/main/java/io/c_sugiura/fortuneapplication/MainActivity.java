@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,11 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 表示画面を設定
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // タイトルバー非表示
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         // 現在日時の取得
         Date now = new Date(System.currentTimeMillis());
@@ -31,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // フォーマット
         String nowText = formatter.format(now);
 
-        // 表示
+        // 日時を表示
         TextView textView = (TextView)findViewById(R.id.textDate);
         textView.setText(nowText);          // 文字
         textView.setTextColor(Color.RED);   // 色
@@ -45,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
     public void onFortuneButtonTapped(View view){
         // 乱数を整数型で取得
         int fortune = (int)(Math.random() * 50);
-
-        // ログ出力し、乱数を確認
-        Log.d("＊＊＊＊＊＊＊＊＊＊","fortuneは「" + fortune + "」");
 
         // 画面遷移用オブジェクトを作成
         Intent intent = new Intent(this, ResultActivity.class);
